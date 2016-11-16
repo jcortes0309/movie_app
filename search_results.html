@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-4">
     </div>
@@ -19,15 +19,21 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-1">
 
     </div>
-    <div class="col-md-8">
-      <ul>
-        <li ng-repeat=" movie in movies" >{{ movie.title }}</li>
-      </ul>
+    <div class="col-md-10">
+      <span ng-repeat="movie in movies">
+        <img ng-src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" alt="{{ movie.title }} poster" />
+      </span>
+
+      <!-- with ng-if to now show information with no posters
+      <span ng-repeat="movie in movies">
+        <img ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" alt="{{ movie.title }}" />
+      </span> -->
+
     </div>
-    <div class="col-md-2">
+    <div class="col-md-1">
 
     </div>
   </div>
