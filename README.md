@@ -91,7 +91,7 @@ Recommendations:
 
 Extract the AJAX call you made using ```$http``` into an AngularJS service, let's call it the ```Movie``` service. The service will have a ```search``` method that takes in a query parameter, and returns a promise that will contain the search results.
 
-## Step 5: Movie Details Page
+## Step 6: Movie Details Page
 
 We'll make each search result that's displayed in Steps 3 & 4 clickable and link to the movie details page for that movie.
 
