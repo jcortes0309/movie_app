@@ -1,2 +1,36 @@
 <!DOCTYPE html>
-<h1>This is the search_results.html file</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group">
+        <input ng-model="searchMovies" ng-keyup="$event.keyCode == 13 && search()" type="text" class="form-control input-lg" placeholder="Search Movies">
+      </div>
+    </div>
+    <div class="col-xs-4">
+
+    </div>
+  </div>
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h3>Movies found:</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+      <ul>
+        <li ng-repeat=" movie in movies" >{{ movie.title }}</li>
+      </ul>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+  <!-- /.container -->
