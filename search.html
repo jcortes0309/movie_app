@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<div class="outer_container">
+  <div class="inner_container">
+
+    <div class="form-group">
+      <input ng-model="searchMovies" ng-keyup="$event.keyCode == 13 && search()" type="text" class="form-control input-lg" placeholder="Search Movies">
+    </div>
+    {{ searchMovies }}
+
+  </div>
+</div>
