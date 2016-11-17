@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="#">&lt;&lt; Search Again...</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <a href="{{ movie_details.homepage }}">
+        <img class="poster" ng-src="https://image.tmdb.org/t/p/w300/{{ movie_details.poster_path }}" alt="" />
+      </a>
+      <h1>{{ movie_details.title }}</h1>
+      <h4>{{ movie_details.tagline }}</h4>
+      <p>{{ movie_details.overview }}</p>
+      <p>Homepage: <a href="{{ movie_details.homepage }}">{{ movie_details.homepage }}</a></p>
+      <p>Release date: {{ movie_details.release_date }}</p>
+      <p>Popularity: {{ movie_details.popularity | number:2 }}</p>
+      <h3>Genre</h3>
+      <ul class="genres">
+        <li ng-repeat="genre in movie_details.genres">{{ genre.name }}</li>
+      </ul>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <hr>
+      <h3>Recommended Movies</h3>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <div class="flex_parent">
+        <div ng-repeat="movie in recommended_movies">
+          <a ui-sref="movie({id: movie.id})"> <!-- This performs something similar to the $state.go(...) code -->
+            <img class="movie_poster" ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w154/{{ movie.poster_path }}" alt="{{ movie.title }} poster" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>
