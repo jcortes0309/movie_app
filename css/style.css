@@ -8,19 +8,69 @@ body,
 html {
   width: 100%;
   height: 100%;
+  color: white;
 }
 
-.outer_container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+body {
+  padding-top: 50px;
+  background-color: black;
 }
 
-.inner_container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 800px;
+.super_search {
+  background-color: navy;
+  margin-bottom: 50px;
+}
+
+.super_search h1 {
+  padding: 40px;
+}
+
+ul.nav-pills {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.nav-pills a {
+  color: white;
+}
+
+.nav-pills a:hover {
+  color: black;
+}
+
+.genres {
+  margin-left: 25px;
+}
+
+.poster {
+  float: right;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  padding: 15px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+
+.movie_poster {
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 5px 15px;
+  padding: 10px;
+}
+
+.flex_parent {
+  display: flex;
+  flex-flow: row wrap;
+  /*Same as line above
+  flex-direction: row;
+  flex-wrap: wrap;*/
+  justify-content: center;
+  align-items: center;
+}
+
+figcaption {
+  margin-bottom: 20px;
+  color: white;
 }
