@@ -44,7 +44,7 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-10">
-      <div class="flex_parent">
+      <div class="flex_parent recommended_movies">
         <div ng-repeat="movie in recommended_movies">
           <a ui-sref="movie({id: movie.id})"> <!-- This performs something similar to the $state.go(...) code -->
             <img class="movie_poster" ng-if="movie.poster_path" ng-src="https://image.tmdb.org/t/p/w154/{{ movie.poster_path }}" alt="{{ movie.title }} poster" />

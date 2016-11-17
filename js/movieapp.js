@@ -84,7 +84,7 @@ app.controller("MainController", function($scope, $state, Movie) {
     });
   };
 
-  $scope.popular = function() {
+  $scope.popularMovies = function() {
     Movie.popular().success(function(popular) {
       // popular movies
       $scope.api_results = popular;
@@ -93,9 +93,9 @@ app.controller("MainController", function($scope, $state, Movie) {
     });
   };
 
-  $scope.upcoming = function() {
+  $scope.upcomingMovies = function() {
     Movie.upcoming().success(function(upcoming) {
-      // popular movies
+      // upcoming movies
       $scope.api_results = upcoming;
       $scope.upcoming = $scope.api_results.results;
       console.log("Popular movies: ", $scope.upcoming);

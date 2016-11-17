@@ -30,7 +30,19 @@ ul.nav-pills {
   margin-top: 20px;
 }
 
-.nav-pills a {
+ul.nav-pills li.active a {
+  background-color: navy;
+}
+
+ul.nav-pills li.active a:focus {
+  background-color: navy;
+}
+
+ul.nav-pills li.active a:hover {
+  background-color: navy;
+}
+
+a {
   color: white;
 }
 
@@ -68,6 +80,10 @@ ul.nav-pills {
   flex-wrap: wrap;*/
   justify-content: center;
   align-items: center;
+}
+
+.flex_parent.recommended_movies {
+  justify-content: flex-start;
 }
 
 figcaption {
