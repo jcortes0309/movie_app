@@ -43,11 +43,22 @@ ul.nav-pills li.active a:hover {
 }
 
 a {
-  color: white;
+  color: #FFF;
 }
 
 .nav-pills a:hover {
   color: black;
+}
+
+a button.btn {
+  color: #000;
+}
+
+a button.btn:hover,
+a button.btn.search_again:active {
+  background-color: navy;
+  color: #FFF;
+  border-color: navy;
 }
 
 .genres {
@@ -83,7 +94,7 @@ a {
 }
 
 .flex_parent.recommended_movies {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 figcaption {
